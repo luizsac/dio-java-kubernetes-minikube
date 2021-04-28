@@ -68,6 +68,7 @@ k-build-image:
 	eval $$(minikube -p dev.to docker-env) && docker build --force-rm -t java-k8s .;
 
 k-cache-image:
+    # não funcionou pra mim, foi necessário usar "minikube -p dev.to cache add java-k8s:latest"
 	minikube cache add java-k8s;
 
 k-deploy-app:
