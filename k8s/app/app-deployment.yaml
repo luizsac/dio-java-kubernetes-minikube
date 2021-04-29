@@ -29,12 +29,12 @@ spec:
               httpGet:
                 path: /app/actuator/health/liveness
                 port: 8080
-              initialDelaySeconds: 30
+              initialDelaySeconds: 180 # aumento do tempo para compensar limitações da VM
             readinessProbe:
               httpGet:
                 path: /app/actuator/health/readiness
                 port: 8080
-              initialDelaySeconds: 30
+              initialDelaySeconds: 180 # aumento do tempo para compensar limitações da VM
             resources:
               requests:
                 memory: "512Mi"
